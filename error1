@@ -1,0 +1,89 @@
+---------------------------------------------------------------------------
+OSError                                   Traceback (most recent call last)
+Cell In[1], line 325
+    321 
+    322     return df_Total
+    323 
+    324 
+--> 325 df = comparables(dia, mes, anio)
+
+Cell In[1], line 232, in comparables(dia, mes, anio)
+    230 def comparables(dia, mes, anio):
+    231     tc = tc1(dia, mes, anio)
+--> 232     aum_dict = obtener_aum_por_comparable(mes, anio)
+    233 
+    234     df_Total = pd.DataFrame()
+    235     errores = []
+
+Cell In[1], line 149, in obtener_aum_por_comparable(mes, anio)
+    145         wb = xw.Book(RUTA_MKTCAP, read_only=True, update_links=False)
+    146         sheet = wb.sheets['MKT']
+    147         data = sheet.used_range.value
+    148     finally:
+--> 149         if wb is not None:
+    150             wb.close()
+    151 
+    152     df_h = pd.DataFrame(data)
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\main.py:969, in Book.__init__(self, fullname, update_links, read_only, format, password, write_res_password, ignore_read_only_recommended, origin, delimiter, editable, notify, converter, add_to_mru, local, corrupt_load, impl, json, mode, engine, **kwargs)
+    967 candidates = []
+    968 for app in apps:
+--> 969     for wb in app.books:
+    970         if kwargs.get("from_xl") and sys.platform.startswith("darwin"):
+    971             if wb.name.lower() == os.path.split(fullname)[1].lower():
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\main.py:551, in App.books(self)
+    544 @property
+    545 def books(self) -> Books:
+    546     """
+    547     A collection of all Book objects that are currently open.
+    548 
+    549     .. versionadded:: 0.9.0
+    550     """
+--> 551     return Books(impl=self.impl.books)
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\_xlwindows.py:691, in App.books(self)
+    689 @property
+    690 def books(self):
+--> 691     return Books(xl=self.xl.Workbooks, app=self)
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\_xlwindows.py:578, in App.xl(self)
+    575 @property
+    576 def xl(self):
+    577     if self._xl is None:
+--> 578         self._xl = get_xl_app_from_hwnd(self._hwnd)
+    579     return self._xl
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\_xlwindows.py:321, in get_xl_app_from_hwnd(hwnd)
+    318 child_hwnd = win32gui.FindWindowEx(hwnd, 0, "XLDESK", None)
+    319 child_hwnd = win32gui.FindWindowEx(child_hwnd, 0, "EXCEL7", None)
+--> 321 ptr = accessible_object_from_window(child_hwnd)
+    322 p = _PyCom_PyObjectFromIUnknown(ptr, byref(_IDISPATCH_GUID), True)
+    323 disp = COMRetryObjectWrapper(Dispatch(p))
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\_xlwindows.py:294, in accessible_object_from_window(hwnd)
+    287 def accessible_object_from_window(hwnd):
+    288     # ptr is a pointer to an IDispatch:
+    289     # https://docs.microsoft.com/en-us/windows/win32/api/oaidl/nn-oaidl-idispatch
+    290     # We don't bother using ctypes.POINTER(comtypes.automation.IDispatch)()
+    291     # because we won't dereference the pointer except through pywin32's
+    292     # pythoncom.PyCom_PyObjectFromIUnknown below in get_xl_app_from_hwnd().
+    293     ptr = ctypes.c_void_p()
+--> 294     res = oledll.oleacc.AccessibleObjectFromWindow(  # noqa: F841
+    295         hwnd, OBJID_NATIVEOM, byref(_IDISPATCH_GUID), byref(ptr)
+    296     )
+    297     return ptr
+
+File _ctypes/callproc.c:1036, in GetResult()
+-> 1036 'Could not get source, probably due dynamically evaluated source code.'
+
+OSError: [WinError -2147467259] Error no especificado
+
+
+
+
+
+C:\Users\p048546\AppData\Local\Temp\ipykernel_34132\355976240.py:11: Pandas4Warning: 'future.no_silent_downcasting' is deprecated, please refrain from using it.
+  pd.set_option('future.no_silent_downcasting', True)
+2026-06-30
+3.6555
