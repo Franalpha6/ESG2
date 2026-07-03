@@ -1,0 +1,58 @@
+este mensaje printeo, según entiendo hay fallas: 2026-06-30
+
+3.4075
+
+2026-06-01 00:00:00
+
+{'IEMG US': 160394.808, 'CEMB US': 397.155, 'ILF US': 3737.8125, 'ACWI US': 33214.852, 'EEM US': 30291.948, 'SWDA LN': 106454.6361, 'EPU US': 521.875, 'ETF Perú': 91.2645}
+
+202606 ACWI US.xlsx
+
+[ERROR] Falló '202606 ACWI US.xlsx': "En '202606 ACWI US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Name', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 CEMB US.xlsx
+
+[ERROR] Falló '202606 CEMB US.xlsx': "En '202606 CEMB US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 EEM US.xlsx
+
+[ERROR] Falló '202606 EEM US.xlsx': "En '202606 EEM US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 EPU US.xlsx
+
+[ERROR] Falló '202606 EPU US.xlsx': "En '202606 EPU US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 ETF Perú.xlsx
+
+[ERROR] Falló '202606 ETF Perú.xlsx': "En '202606 ETF Perú.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 IEMG US.xlsx
+
+El Market Value en el archivo 202606 IEMG US.xlsx es: 0.9993397066516583
+
+202606 ILF US.xlsx
+
+[ERROR] Falló '202606 ILF US.xlsx': "En '202606 ILF US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+202606 SWDA LN.xlsx
+
+[ERROR] Falló '202606 SWDA LN.xlsx': "En '202606 SWDA LN.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+=== AVISO: algunos archivos fallaron y fueron omitidos ===
+
+- 202606 ACWI US.xlsx: "En '202606 ACWI US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Name', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 CEMB US.xlsx: "En '202606 CEMB US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 EEM US.xlsx: "En '202606 EEM US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 EPU US.xlsx: "En '202606 EPU US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 ETF Perú.xlsx: "En '202606 ETF Perú.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 ILF US.xlsx: "En '202606 ILF US.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+- 202606 SWDA LN.xlsx: "En '202606 SWDA LN.xlsx' faltan columnas requeridas ['Market Value (%) (P)', 'Name', 'MSCI ESG Rating (P)', 'Px Close (P)']. Columnas encontradas: ['Unnamed: 0', 'ID059', 'POINT_Issue_Year', 'ISIN', 'Ticker', 'Market Value (%)', 'Issuer', 'MSCI ESG Rating', 'Crncy', 'Cntry (Risk)', 'Currency (Risk)', 'Class - Broad', 'Total Assets', 'Short Name', 'Market Cap (USD)', 'Company Name', 'Price Source', 'BB Comp', 'Pos', 'Sector', 'Px Close', 'Pos (Disp)', 'Pos.1']"
+
+Archivo generado: Z:\Mesa de Inversiones\Bottom-Up\2 Proceso de Inversión Renta Fija\Corporates - Emisiones\Crédito - BU\3. ESG\9. ESG Manager - MSCI\1.Data Histórica\Output\Intermedio\\202606 Comparables.xlsx
+ 
