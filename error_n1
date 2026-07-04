@@ -1,0 +1,54 @@
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[11], line 1
+----> 1 df, auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor, fecha = generador_input(escenario_input,fecha_input)
+      2 
+      3 aumsif1 = aumhaf1 + aumpff1 + aumrif1
+      4 aumsif2 = aumhaf2 + aumpff2 + aumrif2
+
+Cell In[10], line 3, in generador_input(escenario, fecha)
+      1 def generador_input(escenario, fecha):
+      2     auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3 = generador_de_variables(fecha_aum)
+----> 3     return df_obtenido(escenario),auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor_dolar(fecha), fecha
+
+Cell In[6], line 2, in df_obtenido(escenario)
+      1 def df_obtenido(escenario):
+----> 2     wb = xw.Book(r'Z:\Mesa de Inversiones\Bottom-Up\2 Proceso de Inversión Renta Fija\Corporates - Emisiones\Crédito - BU\3. ESG\9. ESG Manager - MSCI\1.Data Histórica\Dataset\G&P input\G&P_MLab_' + mes + anio + '.xlsm',read_only=True, update_links=False)  ###### Poner la verdadera ruta del archivo
+      3     sheet = wb.sheets['Abs']
+      4     sheet.range('E3').value = escenario
+      5 
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\main.py:986, in Book.__init__(self, fullname, update_links, read_only, format, password, write_res_password, ignore_read_only_recommended, origin, delimiter, editable, notify, converter, add_to_mru, local, corrupt_load, impl, json, mode, engine, **kwargs)
+    984     if not app:
+    985         app = App(add_book=False)
+--> 986     impl = app.books.open(
+    987         fullname,
+    988         update_links,
+    989         read_only,
+    990         format,
+    991         password,
+    992         write_res_password,
+    993         ignore_read_only_recommended,
+    994         origin,
+    995         delimiter,
+    996         editable,
+    997         notify,
+    998         converter,
+    999         add_to_mru,
+   1000         local,
+   1001         corrupt_load,
+   1002     ).impl
+   1003 elif len(candidates) > 1:
+   1004     raise Exception(
+   1005         "Workbook '%s' is open in more than one Excel instance."
+   1006         % fullname
+   1007     )
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\xlwings\main.py:5384, in Books.open(self, fullname, update_links, read_only, format, password, write_res_password, ignore_read_only_recommended, origin, delimiter, editable, notify, converter, add_to_mru, local, corrupt_load, json)
+   5382 fullname = utils.fspath(fullname)
+   5383 if not os.path.exists(fullname):
+-> 5384     raise FileNotFoundError("No such file: '%s'" % fullname)
+   5385 fullname = os.path.realpath(fullname)
+   5386 _, name = os.path.split(fullname)
+
+FileNotFoundError: No such file: 'Z:\Mesa de Inversiones\Bottom-Up\2 Proceso de Inversión Renta Fija\Corporates - Emisiones\Crédito - BU\3. ESG\9. ESG Manager - MSCI\1.Data Histórica\Dataset\G&P input\G&P_MLab_062026.xlsm'
