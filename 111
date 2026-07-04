@@ -1,0 +1,82 @@
+bien 1
+bien 2
+2026-07-01 00:00:00
+Fila 9 (posible header 1):
+['SBS', 'ID_Quest', 'Nombre', 'Moneda', 'Asset Class', 'Mercado', 'Cat', 'SubCat', 'Sub Cat2', 'Sub Cat3', 'Lista sin repetir', 'Categoría', 'CHK_RF', 'Posición', 'AC Dir', 'Rank Rt', 'UCIT', 'A/P', 'SAA', 'SBS_TIPO', 'PLTrading', None, 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', None, 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', nan, 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', 'GAP', 'PBS', np.float64(nan), None, None, 'GAP', 'PBS']
+Fila 10 (posible header 2):
+['5374914AIP4B', 'Antin Infrastructure Partners IV', 'Antin Infrastructure Partners IV', 'EUR', 'Alternativos', 'Internacional', 'Infraestructura', '_', '_', '_', 'ALT_I_INF', 'ALT_I_INF', nan, 1.0, 'ALT', 'ALT', nan, nan, 'REIT', 'Inter_AFO_FMA', '-', None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, -0.0117095792485477, 0.0, 0.0, 0.0, 0.0, 0.0, -0.00341453349893545, 0.0, nan, 0.0, 0.0, -0.0100043789667092, 0.0, 0.0, 0.0, 0.0, 0.0, -0.00469367016735615, 0.0, np.float64(nan), None, None, 0.0, 0.0]
+['SBS_5374914AIP4B', 'Nombre_Antin Infrastructure Partners IV', 'Asset Class_Alternativos', 'Cat_Infraestructura', 'SubCat__', 'Sub Cat2__', 'Categoría_ALT_I_INF', 'AC Dir_ALT', 'Rank Rt_ALT', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_-0.0117095792485477', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_-0.00341453349893545', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_-0.0100043789667092', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_0.0', 'PBS_0.0', 'GAP_-0.00469367016735615', 'PBS_0.0']
+
+
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\indexes\base.py:3641, in Index.get_loc(self, key)
+   3640 try:
+-> 3641     return self._engine.get_loc(casted_key)
+   3642 except KeyError as err:
+
+File pandas/_libs/index.pyx:168, in pandas._libs.index.IndexEngine.get_loc()
+--> 168 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:192, in pandas._libs.index.IndexEngine.get_loc()
+--> 192 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:235, in pandas._libs.index.IndexEngine._get_loc_duplicates()
+--> 235 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:243, in pandas._libs.index.IndexEngine._maybe_get_bool_indexer()
+--> 243 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:135, in pandas._libs.index._unpack_bool_indexer()
+--> 135 'Could not get source, probably due dynamically evaluated source code.'
+
+KeyError: 'SBS'
+
+The above exception was the direct cause of the following exception:
+
+KeyError                                  Traceback (most recent call last)
+Cell In[22], line 1
+----> 1 df, auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor, fecha = generador_input(escenario_input,fecha_input)
+      2 
+      3 aumsif1 = aumhaf1 + aumpff1 + aumrif1
+      4 aumsif2 = aumhaf2 + aumpff2 + aumrif2
+
+Cell In[21], line 3, in generador_input(escenario, fecha)
+      1 def generador_input(escenario, fecha):
+      2     auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3 = generador_de_variables(fecha_aum)
+----> 3     return df_obtenido(escenario),auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor_dolar(fecha), fecha
+
+Cell In[17], line 47, in df_obtenido(escenario)
+     43 
+     44 
+     45     print(df.columns.tolist())
+     46 
+---> 47     df.insert(1, 'SBS2', df["SBS"].apply(recor))
+     48     del df['PBS']
+     49     df.columns = ['SBS', 'SBS2','Nombre', 'Asset Class', 'Cat', 'SubCat', 'Sub Cat2', 'Categoría','AC Dir', 'Rank Rt', 
+     50                'INF1', 'HAF1GAP', 'RIF1GAP', 'PFF1GAP', 'SIF1GAP',
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\frame.py:4378, in DataFrame.__getitem__(self, key)
+   4374 
+   4375         if is_single_key:
+   4376             if self.columns.nlevels > 1:
+   4377                 return self._getitem_multilevel(key)
+-> 4378             indexer = self.columns.get_loc(key)
+   4379             if is_integer(indexer):
+   4380                 indexer = [indexer]
+   4381         else:
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\indexes\base.py:3648, in Index.get_loc(self, key)
+   3643     if isinstance(casted_key, slice) or (
+   3644         isinstance(casted_key, abc.Iterable)
+   3645         and any(isinstance(x, slice) for x in casted_key)
+   3646     ):
+   3647         raise InvalidIndexError(key) from err
+-> 3648     raise KeyError(key) from err
+   3649 except TypeError:
+   3650     # If we have a listlike key, _check_indexing_error will raise
+   3651     #  InvalidIndexError. Otherwise we fall through and re-raise
+   3652     #  the TypeError.
+   3653     self._check_indexing_error(key)
+
+KeyError: 'SBS'
