@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[34], line 1
+----> 1 df, auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor, fecha = generador_input(escenario_input,fecha_input)
+      2 
+      3 aumsif1 = aumhaf1 + aumpff1 + aumrif1
+      4 aumsif2 = aumhaf2 + aumpff2 + aumrif2
+
+Cell In[33], line 3, in generador_input(escenario, fecha)
+      1 def generador_input(escenario, fecha):
+      2     auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3 = generador_de_variables(fecha_aum)
+----> 3     return df_obtenido(escenario),auminf1,auminf2,auminf3,aumhaf1,aumhaf2,aumhaf3,aumrif1,aumrif2,aumrif3,aumpff1,aumpff2,aumpff3, valor_dolar(fecha), fecha
+
+Cell In[29], line 36, in df_obtenido(escenario)
+     32 
+     33     # --- localizar dinámicamente 'SBS' en vez de asumir posición fija ---
+     34     candidatos = [i for i, h in enumerate(header2) if str(h).strip() == 'SBS']
+     35     if not candidatos:
+---> 36         raise ValueError(
+     37             f"No se encontró 'SBS' en el header de 'Detallado'. Header2 leído: {header2.tolist()}"
+     38         )
+     39     delta = candidatos[0] - 0  # 0 = posición original esperada de 'SBS'
+
+ValueError: No se encontró 'SBS' en el header de 'Detallado'. Header2 leído: ['5374914AIP4B', 'Antin Infrastructure Partners IV', 'Antin Infrastructure Partners IV', 'EUR', 'Alternativos', 'Internacional', 'Infraestructura', '_', '_', '_', 'ALT_I_INF', 'ALT_I_INF', nan, 1.0, 'ALT', 'ALT', nan, nan, 'REIT', 'Inter_AFO_FMA', '-', None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, -0.0117095792485477, 0.0, 0.0, 0.0, 0.0, 0.0, -0.00341453349893545, 0.0, nan, 0.0, 0.0, -0.0100043789667092, 0.0, 0.0, 0.0, 0.0, 0.0, -0.00469367016735615, 0.0, np.float64(nan), None, None, 0.0, 0.0]
