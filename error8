@@ -1,0 +1,64 @@
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\indexes\base.py:3641, in Index.get_loc(self, key)
+   3640 try:
+-> 3641     return self._engine.get_loc(casted_key)
+   3642 except KeyError as err:
+
+File pandas/_libs/index.pyx:168, in pandas._libs.index.IndexEngine.get_loc()
+--> 168 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:192, in pandas._libs.index.IndexEngine.get_loc()
+--> 192 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:235, in pandas._libs.index.IndexEngine._get_loc_duplicates()
+--> 235 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:243, in pandas._libs.index.IndexEngine._maybe_get_bool_indexer()
+--> 243 'Could not get source, probably due dynamically evaluated source code.'
+
+File pandas/_libs/index.pyx:135, in pandas._libs.index._unpack_bool_indexer()
+--> 135 'Could not get source, probably due dynamically evaluated source code.'
+
+KeyError: 'Market Value (%) (P)'
+
+The above exception was the direct cause of the following exception:
+
+KeyError                                  Traceback (most recent call last)
+Cell In[106], line 1
+----> 1 plantilla_epu, plantilla_ETF  = plantilla_epu_etf(anio, mes)
+
+Cell In[105], line 11, in plantilla_epu_etf(anio, mes)
+      7     df_p = pd.DataFrame(sheet)
+      8     df_p.columns = df_p.iloc[0,::]
+      9     df_p = df_p.drop([0],axis=0)
+     10     df_p = df_p[df_p["ISIN"].notna()]
+---> 11     df_p = df_p[df_p['Market Value (%) (P)'].notna()]
+     12 
+     13     df_p['Market Value (%) (P)'] = df_p['Market Value (%) (P)']/100
+     14     df_p = df_p.get(['ISIN', 'Market Value (%) (P)'])
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\frame.py:4378, in DataFrame.__getitem__(self, key)
+   4374 
+   4375         if is_single_key:
+   4376             if self.columns.nlevels > 1:
+   4377                 return self._getitem_multilevel(key)
+-> 4378             indexer = self.columns.get_loc(key)
+   4379             if is_integer(indexer):
+   4380                 indexer = [indexer]
+   4381         else:
+
+File ~\PyCharmMiscProject\.venv\Lib\site-packages\pandas\core\indexes\base.py:3648, in Index.get_loc(self, key)
+   3643     if isinstance(casted_key, slice) or (
+   3644         isinstance(casted_key, abc.Iterable)
+   3645         and any(isinstance(x, slice) for x in casted_key)
+   3646     ):
+   3647         raise InvalidIndexError(key) from err
+-> 3648     raise KeyError(key) from err
+   3649 except TypeError:
+   3650     # If we have a listlike key, _check_indexing_error will raise
+   3651     #  InvalidIndexError. Otherwise we fall through and re-raise
+   3652     #  the TypeError.
+   3653     self._check_indexing_error(key)
+
+KeyError: 'Market Value (%) (P)'
